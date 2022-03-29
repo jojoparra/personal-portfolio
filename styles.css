@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  /*this are the color scheme*/
+  --color-primary: #d1b798;
+  --color-secondary: #CDAA7D;
+  --color-peach: #FFDAB9;
+  --color-papaya: #FFEFD5;
+  --color-black: black;
+  --color-grey: #a7a1a1;
+  --color-white: white;
+  --color-pink: rgb(236, 187, 195);
+  --color-orange: #e78364;
+  --color-blue: #b2e2fa;
+  --color-yellow: #ffb200;
+  --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
+  --font-family-primary: ;
+  --font-family-secondary: ;
+  --font-weight-reg: 300;
+  --font-weight-bold: 900;
+}
+
+/* when you have a class use the . when you have an id use # */
+.container {
+  width: 100%;
+  /* want it to be responsive so dont use pixels # */
+  margin: auto;
+  /* auto moves text to the middle of the page */
+  overflow: hidden;
+  /* if something goes outside of div it will be hidden */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.branding {
+  border-radius: 50%;
+  max-width: 6%;
+  width: 100%;
+  height: auto;
+  float: left;
+  padding-top: 0%;
+}
+
+header li {
+  /* this is to get rid of bullets in list and make it horizontal*/
+  float: left;
+  display: inline;
+  /* this gets rid of bullets */
+  padding: 0 20px 0 20px;
+  /* top, right, bottom, left */
+}
+
+header {
+  background: var(--color-primary);
+  color: #000000;
+  min-height: 70px;
+  /* set the min height so its responsive */
+  border-bottom: var(--color-pink) 5px solid;
+  /* color, width, and line type */
+  position: relative;
+}
+
+header a {
+  /* this is to grab all the links in the header */
+  color: #000000;
+  text-decoration: none;
+  /* this gets ride of underline on links */
+  text-transform: uppercase;
+  /* this mkes the links uppercase */
+  font-size: 16px;
+}
+
+header nav {
+  float: right;
+}
+
+header .current a {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+header a:hover {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+
+.jordanparra-01 {
+  border-radius: 50%;
+  width: 100%;
+  height: auto;
+  max-width: 20%;
+  margin-left: 15%;
+  margin-top: 5%;
+}
+
+.banner {
+  position: absolute;
+  top: 20%;
+  left: 37%;
+}
+
+.banner h1 {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3rem;
+  font-weight: 300;
+}
+
+.banner p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 2rem;
+}
+
+.css_logo {
+  width: 70px;
+}
+
+.javascript_logo {
+  width: 110px;
+}
+
+.python_logo {
+  width: 80px;
+}
+
+.html_logo {
+  width: 100px;
+}
+
+.git_logo {
+  width: 100px;
+}
+
+.github_logo {
+  width: 90px;
+}
+/*# sourceMappingURL=styles.css.map */
