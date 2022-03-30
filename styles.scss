@@ -79,7 +79,7 @@ header a:hover{
     border-radius: 50%;
     width: 100%; //using line 10 and 11 makes it responsive
     height: auto;
-    max-width: 20%;
+    max-width: 60%;
     margin-left: 15%;
     margin-top: 5%;
 }
@@ -124,3 +124,35 @@ header a:hover{
 .github_logo {
     width: 90px;
 }
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+.flex-item-left {
+    padding: 10px;
+    flex: 50%;
+    margin-left: 10%;
+    background-color: var(--color-pink);
+  }
+  
+.flex-item-right {
+    background-color: var(--color-secondary);
+    padding: 10px;
+    flex: 50%;
+    margin-right: 20%;
+  }
+
+  /* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+    .flex-container {
+      flex-direction: column;
+    }
+  }
+
+.flex-text-1 {
+      padding-top: 15%;
+  }
