@@ -28,45 +28,23 @@
   --font-weight-bold: 900;
 }
 
-/* when you have a class use the . when you have an id use # */
-.container {
-  width: 100%;
-  /* want it to be responsive so dont use pixels # */
-  margin: auto;
-  /* auto moves text to the middle of the page */
-  overflow: hidden;
-  /* if something goes outside of div it will be hidden */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.branding {
-  border-radius: 50%;
-  max-width: 6%;
-  width: 100%;
-  height: auto;
-  float: left;
-  padding-top: 0%;
-}
-
 header li {
   /* this is to get rid of bullets in list and make it horizontal*/
   float: left;
   display: inline;
   /* this gets rid of bullets */
-  padding: 0 20px 0 20px;
+  padding: 20px 20px 0 20px;
   /* top, right, bottom, left */
 }
 
 header {
   background: var(--color-primary);
   color: #000000;
-  min-height: 70px;
+  min-height: 30px;
   /* set the min height so its responsive */
   border-bottom: var(--color-pink) 5px solid;
   /* color, width, and line type */
-  position: relative;
+  position: relative; 
 }
 
 header a {
@@ -93,32 +71,6 @@ header a:hover {
   font-weight: bold;
 }
 
-.jordanparra-01 {
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
-  max-width: 20%;
-  margin-left: 15%;
-  margin-top: 5%;
-}
-
-.banner {
-  position: absolute;
-  top: 20%;
-  left: 37%;
-}
-
-.banner h1 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
-  font-weight: 300;
-}
-
-.banner p {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2rem;
-}
-
 .css_logo {
   width: 70px;
 }
@@ -142,4 +94,56 @@ header a:hover {
 .github_logo {
   width: 90px;
 }
+
 /*# sourceMappingURL=styles.css.map */
+
+.container {
+  max-width: 100rem;
+  margin-inline: auto;
+  /*padding-inline: 2rem;*/
+  padding-bottom: 7%;
+  background-color: var(--color-papaya);
+  padding-top: 1%;
+}
+
+.text_p {
+  line-height: 1.9rem;
+  text-align: left;
+  font-size: 25px;
+  margin-left: .5rem;
+}
+
+.text_h1 {
+  margin-top: 8%;
+  font-size: 40px;
+  margin-left: .5rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns:
+      repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width:fit-content;
+}
+
+.card_img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  max-width: 60%;
+  padding-left: 1rem;
+  padding-bottom: 5%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 5%;
+}
+
+.portfolio-button {
+  margin-left: 7.5rem;
+}
