@@ -33,9 +33,10 @@
   position: fixed;
   top: 0%;
   width: 100%;
-  background-color: var(--color-peach);
+  background-color: var(--color-papaya);
   border-bottom: var(--color-pink) 5px solid;
   transition: 0.3s;
+  z-index: 9999;
 }
 
 .reorder {
@@ -203,13 +204,14 @@ header a:hover {
 /*# sourceMappingURL=styles.css.map */
 
 .container {
-  max-width: 100rem;
+  max-width: 100vh;
   margin-inline: auto;
   /*padding-inline: 2rem;*/
   padding-bottom: 10%;
   padding-top: 5%;
   background-color: var(--color-papaya);
   transition: 0.3s;
+  z-index:1;
 }
 
 .dark .container {
@@ -278,6 +280,10 @@ header a:hover {
   background-color: white;
   border: solid 1px;
   box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.1);
+}
+
+.dark .card-portfolio {
+    background-color: rgb(71, 71, 71);
 }
 
 .placeholder-for-image {
