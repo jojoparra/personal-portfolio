@@ -219,13 +219,11 @@ header a:hover {
   line-height: 1.9rem;
   text-align: left;
   font-size: 25px;
-  margin-left: 1rem;
 }
 
 .text_h1 {
-  margin-top: 6%;
+  margin-top: 15%;
   font-size: 40px;
-  margin-left: 1rem;
 }
 
 .product-grid {
@@ -241,23 +239,22 @@ header a:hover {
 }
 
 .card_img {
-  width: 100%;
+  width: 300px;
   aspect-ratio: 1/1;
   object-fit: cover;
   border-radius: 50%;
-  max-width: 50%;
   padding-left: 1rem;
   padding-bottom: 5%;
   display: block;
   margin: 0 auto;
-  margin-top: 5%;
+  margin-top: 15%;
 }
 
 .portfolio-button {
   margin: 0;
   position: relative;
   top: 3%;
-  left: 15%;
+  left: 10%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
