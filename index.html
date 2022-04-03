@@ -12,26 +12,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <title>Jordan Parra</title>
+   <style>
+       html {
+           scrollbar-width: thin;
+       }
+   </style>
 </head>
 <body>
     <header class="header">
             <nav class="navbar">
-                    <ul class="reorder"> 
-                        <li class="current"><a href="index.html">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#footer">Connect</a></li>
-                    </ul> 
-                    <div class="switch">
-                        <div class="flicker"></div>
-                        <div class="moon"></div>
-                    </div>
+                <ul class="reorder"> 
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#footer">Connect</a></li>
+                </ul> 
+                <div class="switch">
+                    <div class="flicker"></div>
+                    <div class="moon"></div>
+                </div>
             </nav>
     </header>
     <section class="main">
             <div class="product-grid">
                 <div class="card stacked">
-                    <img src="jordanparra-01.png" class="card_img">
+                    <img src="jordanparra-01.png" alt="picture of Jordan Parra smiling" class="card_img">
                 </div>
                 <div class="card stacked">
                     <h1 class="text_h1">Hi there,</h1><br>
@@ -39,10 +44,8 @@
                     <br><br><button type="button" class="portfolio-button">My portfolio</button>
                 </div> 
             </div>
-        </div>
-        <div id="about"></div>
-        <br>
-        <br>
+            <div id="about"></div>
+            <br><br>
         <h1 class="about-title">About</h1>
         <section class="section_about">
             <div class="square">
@@ -73,20 +76,17 @@
             </div>
         </section>
         <!-- facts about me -->
+        <h1 class="about-title">A little about me...</h1>
         <section class="section facts" id="facts">
-            <h1 class="section__title section__title--intro">
-                <strong>A little about me:</strong>
-            </h1>
-            <ul>
-                <li>I am a self-taught sewist, quilter, and programmer.</li>
+                <p>I am a self-taught sewist, quilter, and programmer.<p>
+                <p>I have recently dove into the world of coding and have since immersed myself in HTML/CSS and Javascript. </p>
                 <li>Favorite outdoor hobbies include biking, running half-marathons, and hiking.</li>
             </ul>
-            <button type="button">Resume</button> 
+            <button type="button" class="resume_button">Resume</button> 
         </section>
         <!-- portfolio -->
         <div id="portfolio"></div>
-        <br>
-        <br>
+        <br><br>
         <h1 class="about-title">Portfolio</h1>
         <section class="section_portfolio" id="portfolio">
             <div class="card-portfolio">
@@ -97,9 +97,7 @@
                 </div>
                 <div class="portfolio-description">
                     <div class="expandMoreContent" id="showMoreContent1">
-                        <p>
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                        <p>This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
                             This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
                             This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
                             This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
@@ -157,18 +155,42 @@
         <button type="button" class="resume_button">Resume</button>
         <br><br><br>
     </main>
+     <!-- Contact -->
+     <section class="section_contact" id="contact">
+        <h1 class="about-title">Contact</h1>
+            <div class="container-contact">
+                <form onSubmit="sendEmail(); reset(); return false">
+                    <h3>Say Hello!</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your email" required>
+                    <textarea id="message" rows="4" placeholder="Let's build something!"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "jordanparra15@gmail.com",
+                        Password : "password",
+                        To : 'jordanparra15@gmail.com',
+                        From : document.getElementById("email").value,
+                        Subject : "New Contact Form Inquiry",
+                        Body : "And this is the body"
+                    }).then(
+                    message => alert(message)
+                    );
+                }
+            </script>
+        
+    </section>
     <footer id="footer">
         <!-- Footer social -->
       <section class="ft-social">
         <ul class="ft-social-list">
-            <li>
-                <h1 class="list_class_header">Lets Connect!</h1>
-            </li>
-            <li class="list_class">
-                <p>Find me on LinkedIn, Github, or shoot me an email at jordanparra15@gmail.com</p>
-            </li>
-            <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github logo" class="footer_github_logo"></a></li>
-            <li><a href="https://www.linkedin.com/in/jordanaparra/"><img src="linkedin.png" alt="linkedin logo" class="linkedin_logo"></a></li>
+            <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo" class="footer_github_logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/jordanaparra/"><img src="linkedin.png" alt="linkedin-logo" class="linkedin_logo"></a></li>
         </ul>
       </section>
     </footer> 
