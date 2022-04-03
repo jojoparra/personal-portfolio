@@ -9,120 +9,191 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap" rel="stylesheet"> 
     <title>Jordan Parra</title>
+   <style>
+       html {
+           scrollbar-width: thin;
+       }
+   </style>
 </head>
 <body>
     <header class="header">
-    <!-- This is the very top container -->
-        <div class="container">
-            <div class="hamburger-menu">
-                <div class="line line-1"></div>
-                <div class="line line-2"></div>
-                <div class="line line-3"></div>
-                <div class="line line-4"></div>
-            </div>
-                <div id="branding"><!-- This is the branding in left corner -->
-                    <img src="webdevlogo.png" alt="" class="branding">
-                </div> 
-                <nav><!-- This is the nav bar -->
-                    <ul><!-- This creates the list for the nav bar -->
-                        <li class="current"><a href="index.html">Home</a></li><!-- This is to link the nav bar -->
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="tutorials.html">Portfolio</a></li>
-                        <li><a href="tutorials.html">Connect</a></li>
-                    </ul>
-                </nav>
-         <!-- This is the end of the very top container -->
-        </div>
+            <nav class="navbar">
+                <ul class="reorder"> 
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#footer">Connect</a></li>
+                </ul> 
+                <div class="switch">
+                    <div class="flicker"></div>
+                    <div class="moon"></div>
+                </div>
+            </nav>
     </header>
-    <main>
-        <!-- intro-->
-        <section class="section home" id="home">
-            <div class="banner">
-                <h1>Hi there,</h1>
-                <p>My name is <strong>Jordan Parra.</strong></p>
-                <p class="section__subtitle section__subtitle--intro">I am a web developer located in Des Moines, IA who loves to code. Let's connect!</p>
-                <button type="button">My portfolio</button>
+    <section class="main">
+            <div class="product-grid">
+                <div class="card stacked">
+                    <img src="jordanparra-01.png" alt="picture of Jordan Parra smiling" class="card_img">
+                </div>
+                <div class="card stacked">
+                    <h1 class="text_h1">Hi there,</h1><br>
+                    <p class="text_p">My name is <strong>Jordan Parra.</strong><br> I am a web developer located in Des Moines, IA. <br>I love to code, learn new things, and challenge myself. <br><br>Let's connect!</p>
+                    <br><br><button type="button" class="portfolio-button">My portfolio</button>
+                </div> 
             </div>
-            <img src="jordanparra-01.png" alt="image of Jordan Parra smiling" class="jordanparra-01"> 
-        </section>
-        <!-- about -->
-        <section class="section about" id="about">
-            <h2 class="section__title"><strong>About</strong></h2>
-            <p class="section__subtitle section__subtitle--about"></p>
-            <div class="about-me__table">
-                <table>
-                    <tr>
-                      <th>img</th>
-                      <th>img</th>
-                      <th>img</th>
-                    </tr>
-                    <tr>
-                      <td>Accessible</td>
-                      <td>Responsive</td>
-                      <td>Germany</td>
-                    </tr>
-                    <tr>
-                      <td> My layouts look and work great on any screen size. </td>
-                      <td> Designed to function properly with assistive technologies and ensure usability for every visitor. </td>
-                      <td>Mexico</td>
-                    </tr>
-                  </table> 
+            <div id="about"></div>
+            <br><br>
+        <h1 class="about-title">About</h1>
+        <section class="section_about">
+            <div class="square">
+                <h2 class="section__title"><strong>Responsive</strong></h2>
+                <i class="fa-solid fa-code"></i>
+                <p>Layouts adjust and function well on multiple screen sizes.</p>
+                <i class="far fa-laptop-mobile"></i>
             </div>
-            <img src="" alt="">
+            <div class="square">
+                <h2 class="section__title"><strong>Inclusive</strong></h2>
+                <i class="fa-solid fa-universal-access"></i>
+                <p>Assistive technology friendly with a dark and light mode option.</p>
+            </div>
+            <div class="square">
+                <h2 class="section__title"><strong>Simple</strong></h2>
+                <i class="fa-solid fa-check"></i>
+                <p>Easy to navigate and understand.</p>
+            </div>
+             <!-- Skills -->
+            <div class="square-1">
+                <h2 class="section__title"><strong>Technical Tools</strong></h2>
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-python"></i>
+                <i class="fa-brands fa-git"></i>
+                <i class="fa-brands fa-github-square"></i>
+            </div>
         </section>
-        <!-- Skills-->
-        <section class="section skills" id="skills">
-            <h1 class="section__title section__title--skills">
-                <strong>Technical Skills</strong>
-            </h1>
-            <table>
-                <tr>
-                    <td><img src="HTML5_logo.png" alt="html logo" class="html_logo"></td>
-                    <td><img src="CSS_logo.png" alt="css logo" class="css_logo"></td>
-                    <td><img src="javascript_logo.png" alt="javascript logo" class="javascript_logo"></td>
-                    <td><img src="python_logo.png" alt="python logo" class="python_logo"></td>
-                    <td><img src="git_logo.png" alt="git logo" class="git_logo"></td>
-                    <td><img src="github_logo.png" alt="github logo" class="github_logo"></td>
-                </tr>
-            </table>
-            <p class="section__subtitle section__subtitle--skills">Take a look at my work to get an in depth view of my skills.</p>
-            <button type="button">My portfolio</button> 
-        </section>
-        <!-- facts about me-->
+        <!-- facts about me -->
+        <h1 class="about-title">A little about me...</h1>
         <section class="section facts" id="facts">
-            <h1 class="section__title section__title--intro">
-                <strong>A little about me:</strong>
-            </h1>
-            <ul>
-                <li>I am a self-taught sewist, quilter, and programmer.</li>
+                <p>I am a self-taught sewist, quilter, and programmer.<p>
+                <p>I have recently dove into the world of coding and have since immersed myself in HTML/CSS and Javascript. </p>
                 <li>Favorite outdoor hobbies include biking, running half-marathons, and hiking.</li>
             </ul>
-            <button type="button">Resume</button> 
+            <button type="button" class="resume_button">Resume</button> 
         </section>
-        <!-- portfolio-->
-        <section class="section portfolio" id="portfolio">
-            <h1 class="section__title section__title--portfolio">
-                <strong>Portfolio</strong>
-            </h1>
-            <ul>
-                <li></li>
-                <li></li>
-            </ul>
-            <button type="button">Resume</button> 
+        <!-- portfolio -->
+        <div id="portfolio"></div>
+        <br><br>
+        <h1 class="about-title">Portfolio</h1>
+        <section class="section_portfolio" id="portfolio">
+            <div class="card-portfolio">
+                <div class="placeholder-for-image">
+                </div>
+                <div class="portfolio-info">
+                <h2>Title</h2>
+                </div>
+                <div class="portfolio-description">
+                    <div class="expandMoreContent" id="showMoreContent1">
+                        <p>This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                        </p>
+                    </div>
+                    <div class="expandedMoreHolder">
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent1" class="btn-expand-more">...Show More</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-portfolio">
+                <div class="placeholder-for-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Title 2</h2>
+                </div>
+                <div class="portfolio-description">
+                    <div class="expandMoreContent" id="showMoreContent2">
+                        <p>
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                        </p>
+                    </div>
+                    <div class="expandedMoreHolder">
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent2" class="btn-expand-more">...Show More</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-portfolio">
+                <div class="placeholder-for-image">
+                </div>
+                <div class="portfolio-info">
+                    <h2>Title 3</h2>
+                </div>
+                <div class="portfolio-description">
+                    <div class="expandMoreContent" id="showMoreContent3">
+                        <p>
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                        </p>
+                    </div>
+                    <div class="expandedMoreHolder">
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent3" class="btn-expand-more">...Show More</span>
+                    </div>
+                </div>
+            </div>
         </section>
-         <!-- contact-->
-         <section class="section contact" id="contact">
-            <h1 class="section__title section__title--contact">
-                <strong>Let's Connect!</strong>
-            </h1>
-            <p>Find me on LinkedIn and Github.</p>
-            <button type="button">Resume</button> 
-        </section>
-
+        <br><br> <br>
+        <button type="button" class="resume_button">Resume</button>
+        <br><br><br>
     </main>
+     <!-- Contact -->
+     <section class="section_contact" id="contact">
+        <h1 class="about-title">Contact</h1>
+            <div class="container-contact">
+                <form onSubmit="sendEmail(); reset(); return false">
+                    <h3>Say Hello!</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Your email" required>
+                    <textarea id="message" rows="4" placeholder="Let's build something!"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    Email.send({
+                        Host : "smtp.gmail.com",
+                        Username : "jordanparra15@gmail.com",
+                        Password : "password",
+                        To : 'jordanparra15@gmail.com',
+                        From : document.getElementById("email").value,
+                        Subject : "New Contact Form Inquiry",
+                        Body : "And this is the body"
+                    }).then(
+                    message => alert(message)
+                    );
+                }
+            </script>
+        
+    </section>
+    <footer id="footer">
+        <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list">
+            <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo" class="footer_github_logo"></a></li>
+            <li><a href="https://www.linkedin.com/in/jordanaparra/"><img src="linkedin.png" alt="linkedin-logo" class="linkedin_logo"></a></li>
+        </ul>
+      </section>
+    </footer> 
     <script src="script.js"></script>
 </body>
 </html>

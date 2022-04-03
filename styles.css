@@ -28,50 +28,107 @@
   --font-weight-bold: 900;
 }
 
-/* when you have a class use the . when you have an id use # */
-.container {
-  width: 100%;
-  /* want it to be responsive so dont use pixels # */
-  margin: auto;
-  /* auto moves text to the middle of the page */
+.navbar {
   overflow: hidden;
-  /* if something goes outside of div it will be hidden */
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.branding {
-  border-radius: 50%;
-  max-width: 6%;
+  position: fixed;
+  top: 0%;
   width: 100%;
-  height: auto;
-  float: left;
-  padding-top: 0%;
+  background-color: var(--color-papaya);
+  border-bottom: var(--color-pink) 5px solid;
+  transition: 0.3s;
+  z-index: 9999;
 }
 
-header li {
-  /* this is to get rid of bullets in list and make it horizontal*/
+.reorder {
+  float: right;
+}
+
+.reorder li {
   float: left;
-  display: inline;
-  /* this gets rid of bullets */
-  padding: 0 20px 0 20px;
-  /* top, right, bottom, left */
+  display: block;
+  text-align: center;
+  padding: 17px;
+  padding-left: 5px;
+
+}
+
+.dark .navbar {
+  background-color: rgb(71, 71, 71);
+}
+
+.switch {
+  width: 80px;
+  height: 40px;
+  background-color: black;
+  border-radius: 20px;
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: 10px;
+}
+
+.flicker {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: white;
+  position: absolute; /*means the flicker will be in the same positon always, relative to the switch which is its parent*/
+  top: 5px;
+  left: 5px;
+  transition: 0.3s;
+  box-shadow: 
+    inset 4px 4px 4px rgb(255,255,255), 
+    inset -4px -4px 4px rgb(195 193 198 / 90%);
+}
+
+.dark {
+  background-color: rgb(57, 57, 57);
+  transition: 0.3s;
+}
+
+body {
+  transition: 0.3s;
+  background-color: var(--color-peach);
+}
+
+.moon {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
+  position: absolute;
+  top: 5px;
+  left: 45px;
+}
+
+.dark .flicker { /*if there is an element of dark, get the child flicker and do the following*/
+ transform: translateX(40px);
+}
+
+.dark > * {
+  color: white;
+}
+
+.dark footer {
+  background-color: rgb(136, 136, 136);
 }
 
 header {
-  background: var(--color-primary);
-  color: #000000;
-  min-height: 70px;
+  background-color: white;
+  min-height: 30px;
   /* set the min height so its responsive */
   border-bottom: var(--color-pink) 5px solid;
   /* color, width, and line type */
-  position: relative;
+  position: relative; 
+}
+
+.dark .header {
+  background-color: rgb(71, 71, 71);
 }
 
 header a {
   /* this is to grab all the links in the header */
-  color: #000000;
+  color: black;
   text-decoration: none;
   /* this gets ride of underline on links */
   text-transform: uppercase;
@@ -79,46 +136,47 @@ header a {
   font-size: 16px;
 }
 
-header nav {
-  float: right;
+header .current a {
+  color: var(--color-pink);
+  font-weight: bold;
 }
 
-header .current a {
-  color: var(--color-blue);
+.dark header .current a {
+  color: var(--color-pink);
   font-weight: bold;
 }
 
 header a:hover {
-  color: var(--color-blue);
+  color: var(--color-pink);
   font-weight: bold;
 }
 
-.jordanparra-01 {
-  border-radius: 50%;
-  width: 100%;
-  height: auto;
-  max-width: 20%;
-  margin-left: 15%;
-  margin-top: 5%;
+.dark header a:hover {
+  color: var(--color-pink);
+  font-weight: bold;
 }
 
-.banner {
-  position: absolute;
-  top: 20%;
-  left: 37%;
+.dark header a {
+  color: white;
 }
 
-.banner h1 {
-  font-family: 'Bebas Neue', cursive;
-  font-size: 3rem;
-  font-weight: 300;
+.header {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.banner p {
-  font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2rem;
+.main {
+  height: 80vh; 
 }
 
+.about-title {
+ margin-left: 3%;
+ margin-top: 3%;
+}
+
+.section__title {
+  margin-top: 2%;
+}
 .css_logo {
   width: 70px;
 }
@@ -142,4 +200,228 @@ header a:hover {
 .github_logo {
   width: 90px;
 }
+
 /*# sourceMappingURL=styles.css.map */
+
+.container {
+  max-width: 100vh;
+  margin-inline: auto;
+  /*padding-inline: 2rem;*/
+  padding-bottom: 10%;
+  padding-top: 5%;
+  background-color: var(--color-papaya);
+  transition: 0.3s;
+  z-index:1;
+}
+
+.dark .container {
+  background-color: rgb(71, 71, 71);
+}
+.text_p {
+  line-height: 1.9rem;
+  text-align: left;
+  font-size: 25px;
+}
+
+.text_h1 {
+  margin-top: 15%;
+  font-size: 40px;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns:
+      repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.stacked > * {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  width:fit-content;
+}
+
+.card_img {
+  width: 300px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: 50%;
+  padding-left: 1rem;
+  padding-bottom: 5%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.portfolio-button {
+  margin: 0;
+  position: relative;
+  top: 3%;
+  left: 10%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.fa-solid {
+  font-size: 90px;
+  padding-top: 4%;
+  padding-bottom: 2%;
+}
+
+.fa-brands {
+  font-size: 90px;
+  padding-top: 1%;
+  padding-bottom: 4%;
+  padding-left: 2%;
+}
+
+.card-portfolio {
+  width: 440px;
+  margin: 1%;
+  background-color: white;
+  border: solid 1px;
+  box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.1);
+}
+
+.dark .card-portfolio {
+    background-color: rgb(71, 71, 71);
+}
+
+.placeholder-for-image {
+  width: 440px;
+  height: 250px;
+  background-color: blue;
+}
+.expandMoreContent {
+  height: 25px;
+  overflow: hidden;
+  transition: height 0.5s ease-in-out;
+  position: relative;
+}
+.expandMoreContent.expand-active {
+  height: auto;
+  transition: height 0.5s ease-in-out;
+}
+.expandMoreHolder {
+  padding: 15px 0;
+  text-align: center;
+}
+.btn-expand-more{
+  cursor: pointer;
+  border: 1px solid rgb(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+.resume_button {
+  margin: 0;
+  position: relative;
+  top: 0%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding: 90px 30px;
+  background-color: var(--color-papaya);
+  transition: 0.3s;
+}
+
+.dark footer {
+  background-color: rgb(28, 28, 28);
+  transition: 0.3s;
+}
+
+.ft-social {
+  padding: 0 1.875rem 1.25rem;
+}
+.ft-social-list {
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid; 
+  padding-top: 1.25rem;
+}
+.ft-social-list li {
+  margin: 0.5rem;
+  font-size: 1.25rem;
+  display: inline-block;
+}
+
+.list_class {
+  padding-top: 8px;
+  margin-right: 8px;;
+}
+.list_class_header {
+  padding-top: 8px;
+  margin-right: 8px;
+}
+.footer_github_logo {
+  width: 40px;
+  text-align: center;
+}
+
+.linkedin_logo {
+width: 38px;
+padding-top: 2px;;
+}
+
+.square {
+  width: 48%;
+  margin: 1%;
+  height: 300px;
+  background-color: white;
+  text-align: center;
+}
+
+.square-1 {
+  width: 100%;
+  margin: 1%;
+  height: 245px;
+  background-color: white;
+  text-align: center;
+}
+
+.dark .square-1 {
+  background-color: rgb(71, 71, 71);
+}
+
+.dark .square {
+  background-color: rgb(71, 71, 71);
+}
+
+.section_about {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section_portfolio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 970px) {
+  .square {
+    width: 31%;
+    margin: 1%;
+    height: 250px;
+    }
+}
+
+@media only screen and (max-width: 638px) {
+  .text_h1 {
+    text-align: center;
+    margin-top: 1px;
+  }
+  .text_p {
+    text-align: center;
+  }
+  .portfolio-button {
+    margin: 0;
+    position: relative;
+    top: 3%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
