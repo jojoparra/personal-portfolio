@@ -1,51 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Bebas+Neue&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
     <title>Jordan Parra</title>
-   <style>
-       html {
-           scrollbar-width: thin;
-       }
-   </style>
+    <style>
+        html {
+            scrollbar-width: thin;
+        }
+    </style>
 </head>
+
 <body>
     <header class="header">
-            <nav class="navbar">
-                <ul class="reorder"> 
-                    <li class="current"><a href="index.html">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#footer">Connect</a></li>
-                </ul> 
-                <div class="switch">
-                    <div class="flicker"></div>
-                    <div class="moon"></div>
-                </div>
-            </nav>
+        <nav class="navbar">
+            <ul class="reorder">
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Connect</a></li>
+            </ul>
+            <div class="switch">
+                <div class="flicker"></div>
+                <div class="moon"></div>
+            </div>
+        </nav>
     </header>
     <section class="main">
-            <div class="product-grid">
-                <div class="card stacked">
-                    <img src="jordanparra-01.png" alt="picture of Jordan Parra smiling" class="card_img">
-                </div>
-                <div class="card stacked">
-                    <h1 class="text_h1">Hi there,</h1><br>
-                    <p class="text_p">My name is <strong>Jordan Parra.</strong><br> I am a web developer located in Des Moines, IA. <br>I love to code, learn new things, and challenge myself. <br><br>Let's connect!</p>
-                    <br><br><button type="button" class="portfolio-button">My portfolio</button>
-                </div> 
+        <div class="product-grid">
+            <div class="card stacked">
+                <img src="jordanparra-01.png" alt="picture of Jordan Parra smiling" class="card_img">
             </div>
-            <div id="about"></div>
-            <br><br>
+            <div class="card stacked">
+                <h1 class="text_h1">Hi there,</h1><br>
+                <p class="text_p">My name is <strong>Jordan Parra.</strong><br> I am a web developer located in Des
+                    Moines, IA. <br>I love to code, learn new things, and challenge myself. <br><br>Let's connect!</p>
+                <br><br><a href="#portfolio"><button type="button" class="portfolio-button">My portfolio</button></a>
+            </div>
+        </div>
+        <div id="about"></div>
+        <br><br><br><br>
         <h1 class="about-title">About</h1>
         <section class="section_about">
             <div class="square">
@@ -64,7 +72,7 @@
                 <i class="fa-solid fa-check"></i>
                 <p>Easy to navigate and understand.</p>
             </div>
-             <!-- Skills -->
+            <!-- Skills -->
             <div class="square-1">
                 <h2 class="section__title"><strong>Technical Tools</strong></h2>
                 <i class="fa-brands fa-html5"></i>
@@ -78,88 +86,139 @@
         <!-- facts about me -->
         <h1 class="about-title">A little about me...</h1>
         <section class="section facts" id="facts">
-                <p>I am a self-taught sewist, quilter, and programmer.<p>
-                <p>I have recently dove into the world of coding and have since immersed myself in HTML/CSS and Javascript. </p>
-                <li>Favorite outdoor hobbies include biking, running half-marathons, and hiking.</li>
+            <p>I am a self-taught sewist, quilter, and programmer.</p>
+            <p><b>[Favorite outdoor hobbies include]:</b></p>
+            <ul>
+                <li>[0] biking</li>
+                <li>[1] running half-marathons</li>
+                <li>[2] hiking</li>
+                <li>[3] fishing</li>
             </ul>
-            <button type="button" class="resume_button">Resume</button> 
+            <p><b>[Favorite indoor hobbies include]:</b></p>
+            <ul>
+                <li>[0] coding</li>
+                <li>[1] dungeons & dragons</li>
+                <li>[3] Stardew Valley, Animal Crossing, and The Sims</li>
+                <li>[4] sewing</li>
+            </ul>
+            <p><b>I have recently dove into the world of coding and have since immersed myself in HTML/CSS, JavaScript
+                    and
+                    Python.</b></p>
+            </div>
         </section>
         <!-- portfolio -->
-        <div id="portfolio"></div>
-        <br><br>
-        <h1 class="about-title">Portfolio</h1>
+        <div id="portfolio"> </div>
+        <br><br><br><br>
+        <div class="pt">
+            <h1 class="about-title">Portfolio</h1>
+        </div>
         <section class="section_portfolio" id="portfolio">
             <div class="card-portfolio">
                 <div class="placeholder-for-image">
+                    <img src="project1.png" class="project" alt="my portfolio website">
                 </div>
                 <div class="portfolio-info">
-                <h2>Title</h2>
+                    <h2>Portfolio Website</h2>
                 </div>
                 <div class="portfolio-description">
                     <div class="expandMoreContent" id="showMoreContent1">
-                        <p>This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                        <p>I built my portfolio website using HTML, CSS, and JavaScript. I have had experience with HTML
+                            and CSS before, but this was my first time using JavaScript. I learned how to create a light
+                            and dark mode through JavaScript which is an element I have always wanted to create. I have
+                            experimented with 'addEventListener', expanding cards, and creating JavaScript functions.
+                            The JavaScript portion of this website was the most challenging for me as I am learning
+                            JavaScript as I build. I also learned how to use CSS grid and how to integrate fontawesome
+                            icons
+                            into a webpage. Overall this project was a great experience in creating and designing
+                            a webpage that showcases my skills throughout my programming journey.
                         </p>
+                        <p>Click the Github icon below to view my code.</p>
+                        <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo"
+                                    class="card_github_logo"></a></li>
                     </div>
                     <div class="expandedMoreHolder">
-                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent1" class="btn-expand-more">...Show More</span>
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..."
+                            data-target="showMoreContent1" class="btn-expand-more">...Show More</span>
                     </div>
                 </div>
             </div>
             <div class="card-portfolio">
                 <div class="placeholder-for-image">
+                    <img src="project2.png" class="project" alt="my studio ghibli website">
                 </div>
                 <div class="portfolio-info">
-                    <h2>Title 2</h2>
+                    <h2>Studio Ghibli API</h2>
                 </div>
                 <div class="portfolio-description">
                     <div class="expandMoreContent" id="showMoreContent2">
                         <p>
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            I built this website using HTML, CSS, JavaScript and the Studio Ghibli API. I
+                            love the world of Studio Ghibli and wanted experience with working with API's, so the Studio
+                            Ghibli open source API was a great way to get my feet wet. I learned how to make an API
+                            call, see the API data
+                            in the console, isolate specific API data, and how to display API data on a website. This
+                            project was challenging for me because I am still learning JavaScript and had to research
+                            what 'map' did, and
+                            what the best way to call an API is. I decided to use the 'async fetch' method. Overall this
+                            was a fun little project that taught me a lot about how API's work, and the JavaScript
+                            programming language.
                         </p>
+                        <p>Click the Github icon below to view my code.</p>
+                        <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo"
+                                    class="card_github_logo"></a></li>
                     </div>
                     <div class="expandedMoreHolder">
-                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent2" class="btn-expand-more">...Show More</span>
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..."
+                            data-target="showMoreContent2" class="btn-expand-more">...Show More</span>
                     </div>
                 </div>
             </div>
             <div class="card-portfolio">
                 <div class="placeholder-for-image">
+                    <img src="project3.png" class="project" alt="Dwight Schrutte in ASCII">
                 </div>
                 <div class="portfolio-info">
-                    <h2>Title 3</h2>
+                    <h2>ASCII Art</h2>
                 </div>
                 <div class="portfolio-description">
                     <div class="expandMoreContent" id="showMoreContent3">
                         <p>
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
-                            This is my project and I built it using ... This is my project and I built it using ... This is my project and I built it using ...
+                            I built this ASCII art using python. I am a huge fan of The Office, and I wanted
+                            to recreate the ASCII art Pam does on the show as I learned python. I hope this gives you as
+                            much joy as it gave me to recreate! I learned a lot about ASCII characters, how to convert
+                            the image pixels into ASCII characters, how to grayify an image, how to join strings, and
+                            how to resize images. Overall this project was the most challenging for me as python is the
+                            newest programming language to me and is different from JavaScript. However, I thoroughly
+                            enjoyed workng with python as it is easy to write and understand.
                         </p>
+                        <p>Click the Github icon below to view my code.</p>
+                        <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo"
+                                    class="card_github_logo"></a></li>
                     </div>
                     <div class="expandedMoreHolder">
-                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..." data-target="showMoreContent3" class="btn-expand-more">...Show More</span>
+                        <span expand-more data-hidetext="Show Less..." data-showtext="Show More..."
+                            data-target="showMoreContent3" class="btn-expand-more">...Show More</span>
                     </div>
                 </div>
             </div>
         </section>
         <br><br> <br>
-        <button type="button" class="resume_button">Resume</button>
-        <br><br><br>
-    </main>
-     <!-- Contact -->
-     <section class="section_contact" id="contact">
-        <h1 class="about-title">Contact</h1>
+        </div>
+        <div id="resume"></div>
+        <br><br><br><br>
+        <h1 class="about-title">Resume</h1>
+        <section class="resume_section">
+            <embed src="Parra-Resume-2022.pdf" type="application/PDF" id="resume-pdf" />
+        </section>
+        </main>
+        <!-- Contact -->
+        <section class="section_contact" id="contact">
+            <br><br><br><br>
+            <div class="contact-title-container">
+                <h1 class="about-title">Contact</h1>
+            </div>
             <div class="container-contact">
-                <form onSubmit="sendEmail(); reset(); return false">
+                <form onsubmit="sendEmail(); reset(); return false">
                     <h3>Say Hello!</h3>
                     <input type="text" id="name" placeholder="Your Name" required>
                     <input type="email" id="email" placeholder="Your email" required>
@@ -167,33 +226,36 @@
                     <button type="submit">Send</button>
                 </form>
             </div>
-            <script src="https://smtpjs.com/v3/smtp.js"></script>
-            <script>
-                function sendEmail(){
-                    Email.send({
-                        Host : "smtp.gmail.com",
-                        Username : "jordanparra15@gmail.com",
-                        Password : "password",
-                        To : 'jordanparra15@gmail.com',
-                        From : document.getElementById("email").value,
-                        Subject : "New Contact Form Inquiry",
-                        Body : "And this is the body"
-                    }).then(
+        </section>
+        <footer id="footer">
+            <!-- Footer social -->
+            <section class="ft-social">
+                <ul class="ft-social-list">
+                    <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo"
+                                class="footer_github_logo"></a></li>
+                    <li><a href="https://www.linkedin.com/in/jordanaparra/"><img src="linkedin.png" alt="linkedin-logo"
+                                class="linkedin_logo"></a></li>
+                </ul>
+            </section>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+        <script src=" https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function sendEmail() {
+                Email.send({
+                    Host: "smtp.gmail.com",
+                    Username: "",
+                    Password: "",
+                    To: '',
+                    From: document.getElementById("email").value,
+                    Subject: "New Contact Form Inquiry",
+                    Body: "And this is the body"
+                }).then(
                     message => alert(message)
-                    );
-                }
-            </script>
-        
-    </section>
-    <footer id="footer">
-        <!-- Footer social -->
-      <section class="ft-social">
-        <ul class="ft-social-list">
-            <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo" class="footer_github_logo"></a></li>
-            <li><a href="https://www.linkedin.com/in/jordanaparra/"><img src="linkedin.png" alt="linkedin-logo" class="linkedin_logo"></a></li>
-        </ul>
-      </section>
-    </footer> 
-    <script src="script.js"></script>
+                );
+            }
+        </script>
 </body>
+
 </html>
