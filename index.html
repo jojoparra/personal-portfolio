@@ -28,11 +28,12 @@
     <header class="header">
         <nav class="navbar">
             <ul class="reorder">
-                <li class="current"><a href="index.html">Home</a></li>
+                <br><br>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#resume">Resume</a></li>
-                <li><a href="#contact">Connect</a></li>
+                <li><a href="#footer">Connect</a></li>
             </ul>
             <div class="switch">
                 <div class="flicker"></div>
@@ -202,34 +203,18 @@
                 </div>
             </div>
         </section>
-        <br><br> <br>
         </div>
         <div id="resume"></div>
-        <br><br><br><br>
+        <br><br>
         <h1 class="about-title">Resume</h1>
         <section class="resume_section">
-            <embed src="Parra-Resume-2022.pdf" type="application/PDF" id="resume-pdf" />
+            <embed src="Parra-Tech-Resume-2022.pdf" type="application/PDF" id="resume-pdf" />
         </section>
         </main>
-        <!-- Contact -->
-        <section class="section_contact" id="contact">
-            <br><br><br><br>
-            <div class="contact-title-container">
-                <h1 class="about-title">Contact</h1>
-            </div>
-            <div class="container-contact">
-                <form onsubmit="sendEmail(); reset(); return false">
-                    <h3>Say Hello!</h3>
-                    <input type="text" id="name" placeholder="Your Name" required>
-                    <input type="email" id="email" placeholder="Your email" required>
-                    <textarea id="message" rows="4" placeholder="Let's build something!"></textarea>
-                    <button type="submit">Send</button>
-                </form>
-            </div>
-        </section>
         <footer id="footer">
             <!-- Footer social -->
             <section class="ft-social">
+                <a href="malito:jordanparra15@gmail.com" class="footer__link">jordanparra15@gmail.com</a>
                 <ul class="ft-social-list">
                     <li><a href="https://github.com/jojoparra"><img src="github_white.png" alt="github-logo"
                                 class="footer_github_logo"></a></li>
@@ -240,22 +225,6 @@
         </footer>
         <script src="script.js"></script>
         <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-        <script src=" https://smtpjs.com/v3/smtp.js"></script>
-        <script>
-            function sendEmail() {
-                Email.send({
-                    Host: "smtp.gmail.com",
-                    Username: "",
-                    Password: "",
-                    To: '',
-                    From: document.getElementById("email").value,
-                    Subject: "New Contact Form Inquiry",
-                    Body: "And this is the body"
-                }).then(
-                    message => alert(message)
-                );
-            }
-        </script>
 </body>
 
 </html>
