@@ -22,8 +22,6 @@
   --color-blue: #b2e2fa;
   --color-yellow: #ffb200;
   --box-shadow-1: 0 3px 15px rgba(0,0,0,.3);
-  --font-family-primary: ;
-  --font-family-secondary: ;
   --font-weight-reg: 300;
   --font-weight-bold: 900;
 }
@@ -47,9 +45,9 @@
   float: left;
   display: block;
   text-align: center;
-  padding: 17px;
-  padding-left: 2px;
-
+  padding:5px;
+  padding-left: 10px;
+  padding-right: 15px;
 }
 
 .dark .navbar {
@@ -57,8 +55,8 @@
 }
 
 .switch {
-  width: 80px;
-  height: 40px;
+  width: 60px;
+  height: 30px;
   background-color: black;
   border-radius: 20px;
   position: relative;
@@ -68,13 +66,13 @@
 }
 
 .flicker {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   border-radius: 15px;
   background-color: white;
   position: absolute; /*means the flicker will be in the same positon always, relative to the switch which is its parent*/
-  top: 5px;
-  left: 5px;
+  top: 2px;
+  left: 2px;
   transition: 0.3s;
   box-shadow: 
     inset 4px 4px 4px rgb(255,255,255), 
@@ -97,12 +95,12 @@ body {
   border-radius: 10px;
   box-shadow: 4px 4px 0 0 rgb(255, 255, 255);
   position: absolute;
-  top: 5px;
-  left: 45px;
+  top: 2px;
+  left: 33px;
 }
 
 .dark .flicker { /*if there is an element of dark, get the child flicker and do the following*/
- transform: translateX(40px);
+ transform: translateX(35px);
 }
 
 .dark > * {
@@ -174,7 +172,7 @@ header a:hover {
   justify-content: center;
   align-items: center;
   margin-bottom: 0%;
-padding-top: 10px;
+padding-top: 20px;
 padding-bottom: 10px;
 }
 
@@ -318,11 +316,13 @@ p {
 }
 
 .card-portfolio {
-  width: 420px;
-  margin: 1.5%;
+  width: 314px;
   background-color: white;
   border: solid 2px;
   box-shadow: 0 2px 2px 0 rgb(0, 0, 0, 0.1);
+  margin: 0 auto;
+  margin-bottom: 2.5%;
+  margin-top: 1%;
 }
 
 .dark .card-portfolio {
@@ -330,8 +330,8 @@ p {
 }
 
 .placeholder-for-image {
-  width: 416px;
-  height: 217px;
+  width: 310px; /*416px*/
+  height: 162px;
   background-color: blue;
 }
 
@@ -342,9 +342,9 @@ p {
 }
 
 .project {
-  width: 100%;
-    height: 100%;
-    background: contain;
+  width:  310px;
+  height: 170px;
+  object-fit: cover;
 }
 
 .expandMoreContent {
@@ -379,11 +379,22 @@ p {
 footer {
   display: flex;
   justify-content: center;
-  padding: 70px 30px;
+  padding: 50px 30px;
   background-color: var(--color-papaya);
   transition: 0.3s;
 }
 
+.footer__link:hover, 
+.footer_github_logo:hover, 
+.linkedin_logo:hover {
+  opacity: 0.7;
+}
+
+.footer__link {
+  color: tomato;
+  font-weight: bold;
+  font-size: larger;
+}
 .dark footer {
   background-color: rgb(28, 28, 28);
   transition: 0.3s;
@@ -487,27 +498,16 @@ padding-top: 2px;;
   background-color: rgb(71, 71, 71);
 }
 
-.container-contact {
-  width: 100%;
-  height: 90vh;
-  background-color: rgb(247, 231, 187);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 10%;
-}
-.dark .container-contact {
-  background-color: rgb(71, 71, 71);
-}
-
 .resume_section {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 5%;
 }
+
 #resume-pdf {
-  width: 90%;
-  height: 500px;
+  width: 95%;
+  height: 400px;
 }
 
 form {
@@ -518,6 +518,10 @@ form {
   width: 90%;
   max-width: 600px;
   border-radius: 10px;
+}
+
+.dark form {
+  background-color: rgb(107, 105, 105);
 }
 
 form h3{
